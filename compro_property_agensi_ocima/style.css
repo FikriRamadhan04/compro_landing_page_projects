@@ -1,0 +1,231 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Tahoma;
+  background-color: whitesmoke;
+}
+
+/* Navbar */
+nav {
+  font-size: 15px;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 1000;
+  background-color: rgb(9, 87, 151);
+  height: 65px;
+  align-items: center;
+  display: flex;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav_icon_rumah {
+  margin-left: 15px;
+  margin-right: 10px;
+  fill: white;
+  color: white;
+}
+
+nav p {
+  margin: 0;
+  font-size: 17px;
+  padding: 0;
+}
+
+.burger_menu {
+  margin-left: 105px;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  color: antiquewhite;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("images/gambar_1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 04 10px;
+  position: relative;
+}
+
+.judul {
+  margin: 20px;
+  color: white;
+  font-size: 45px;
+  font-weight: bold;
+  position: absolute;
+  position: relative;
+  margin-bottom: 0px;
+}
+
+.sub-judul {
+  background-color: #d3e0fa;
+  color: black;
+  padding: 9px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  position: absolute;
+  position: relative;
+  margin: 15px;
+  border-radius: 10px;
+}
+
+.btn-konsultasi {
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(9, 87, 151);
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  top: 30px;
+  position: absolute;
+  position: relative;
+}
+
+.btn-konsultasi:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* About US*/
+.tentang_kami {
+  margin-top: 60px;
+  font-size: 25px;
+  text-align: center;
+  color: rgb(54, 53, 53);
+}
+
+.visi_misi {
+  margin: 50px 20px 20px;
+}
+
+.visi_misi h3 {
+  color: rgb(9, 87, 151);
+  margin-bottom: 10px;
+}
+
+.visi_misi p {
+  color: dimgray;
+  padding: 0px;
+  margin: 0;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  background-color: #d3e0fa;
+  width: 280px;
+  height: 200px;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-weight: bold;
+  align-items: center;
+}
+
+.stats-item {
+  text-align: center;
+}
+
+.item-1,
+.item-2,
+.item-3,
+.item-4 {
+  color: rgb(9, 87, 151);
+  font-size: 27px;
+  padding: 0;
+  margin: 0;
+}
+
+.stats-item p {
+  color: rgb(54, 53, 53);
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Layanan*/
+.service-container {
+  color: rgb(54, 53, 53);
+  justify-items: center;
+}
+
+.layanan {
+  margin-top: 60px;
+  font-size: 25px;
+  margin-bottom: 35px;
+}
+
+.buying_selling {
+  text-align: center;
+  align-items: center;
+  width: 280px;
+  height: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+}
+
+.layanan-item h3 {
+  font-size: 25px;
+  padding: 0px 5px 0px;
+  margin: 0px;
+  margin-top: 20px;
+}
+.buying_selling p {
+  padding: 0px 20px 0px;
+  font-size: 15px;
+}
+
+.hansake_icon {
+  padding-top: 30px;
+  width: 30%;
+  height: auto;
+}
+
+/* Value*/
+.value-container {
+  color: rgb(54, 53, 53);
+  justify-items: center;
+}
+
+.value {
+  margin-top: 60px;
+  font-size: 25px;
+  margin-bottom: 35px;
+}
+
+.value_selling {
+  text-align: center;
+  align-items: center;
+  width: 280px;
+  height: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+}
+
+.value-item {
+  max-width: 350px;
+  padding: 15px;
+}
+
+.value-item,
+.Properti_1 {
+  width: 100%;
+}
