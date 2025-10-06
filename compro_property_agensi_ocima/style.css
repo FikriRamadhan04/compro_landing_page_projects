@@ -10,16 +10,15 @@ html {
 nav {
   font-size: 15px;
   color: white;
-  position: fixed;
-  top: 0;
   width: 100%;
   left: 0;
   z-index: 1000;
   background-color: rgb(9, 87, 151);
-  height: 65px;
+  height: 60px;
   align-items: center;
   display: flex;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
 }
 
 .nav_home_icon {
@@ -217,7 +216,7 @@ nav p {
   text-align: center;
   align-items: center;
   width: 280px;
-  height: 540px;
+  height: 550px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -307,7 +306,7 @@ nav p {
 .hubungi_sekarang {
   width: 225px;
   height: 40px;
-  margin: 25px auto 0px;
+  margin: 20px auto 0px;
   background-color: rgb(9, 87, 151);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   font-size: 15px;
