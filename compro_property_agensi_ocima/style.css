@@ -1,111 +1,110 @@
-body,
-html {
+/* Reset & Global */
+* {
   margin: 0;
   padding: 0;
-  font-family: Tahoma;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Tahoma, sans-serif;
   background-color: whitesmoke;
+  scroll-behavior: smooth;
 }
 
 /* Navbar */
-nav {
-  font-size: 15px;
-  color: white;
-  width: 100%;
-  left: 0;
-  z-index: 1000;
-  background-color: rgb(9, 87, 151);
-  height: 60px;
-  align-items: center;
+header nav {
   display: flex;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  justify-content: start;
+  height: 60px;
+  width: 100%;
   position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(9, 87, 151);
+  color: white;
+  font-size: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 0 15px;
 }
 
 .nav_home_icon {
-  margin-left: 15px;
   margin-right: 10px;
-  fill: white;
-  color: white;
 }
 
 nav p {
-  margin: 0;
   font-size: 17px;
-  padding: 0;
+  font-weight: bold;
 }
 
 .burger_menu {
-  margin-left: 105px;
+  margin-left: auto;
+  cursor: pointer;
 }
 
 /* Hero Section */
 .hero-section {
-  text-align: center;
-  color: antiquewhite;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-    url("images/gambar_1.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 04 10px;
-  position: relative;
+  text-align: center;
+  height: 100vh;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("images/gambar_1.jpg") center/cover no-repeat;
+  padding: 0 10px;
 }
 
-.judul {
-  margin: 20px;
-  color: white;
+.hero-section .judul {
   font-size: 45px;
   font-weight: bold;
-  position: absolute;
-  position: relative;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 
-.sub-judul {
+.hero-section .sub-judul {
+  font-size: 14px;
   background-color: #d3e0fa;
   color: black;
-  padding: 9px;
-  font-size: 14px;
-  margin-bottom: 15px;
-  position: absolute;
-  position: relative;
-  margin: 15px;
+  padding: 8px 12px;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .btn-konsultasi {
-  font-weight: bold;
+  display: inline-block;
   font-size: 20px;
-  text-decoration: none;
+  font-weight: bold;
   color: white;
   background-color: rgb(9, 87, 151);
-  padding: 15px;
+  text-decoration: none;
+  padding: 15px 25px;
   border-radius: 20px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-  top: 30px;
-  position: relative;
 }
 
 .btn-konsultasi:hover {
   transform: scale(1.05);
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* About US*/
+/* Tentang Kami */
 .tentang_kami {
-  margin-top: 60px;
-  font-size: 25px;
   text-align: center;
+  font-size: 25px;
   color: rgb(54, 53, 53);
+  margin-top: 80px;
 }
 
 .visi_misi {
-  margin: 50px 20px 20px;
+  margin: 40px 20px;
+}
+
+.visi_misi article {
+  margin-bottom: 30px;
 }
 
 .visi_misi h3 {
@@ -115,186 +114,147 @@ nav p {
 
 .visi_misi p {
   color: dimgray;
-  padding: 0px;
-  margin: 0;
+  line-height: 1.5;
 }
 
+/* Stats */
 .stats-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3px;
-  background-color: #d3e0fa;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
   width: 280px;
   height: 200px;
-  margin: 50px auto;
+  margin: 40px auto;
+  background-color: #d3e0fa;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  color: white;
-  font-weight: bold;
   align-items: center;
-}
-
-.stats-item {
   text-align: center;
+  font-weight: bold;
 }
 
-.item-1,
-.item-2,
-.item-3,
-.item-4 {
-  color: rgb(9, 87, 151);
+.stats-item h3 {
   font-size: 23px;
-  padding: 0;
-  margin: 0;
+  color: rgb(9, 87, 151);
+  margin-bottom: 5px;
 }
 
 .stats-item p {
-  color: rgb(54, 53, 53);
   font-size: 14px;
-  padding: 0;
-  margin: 0;
-}
-
-/* Layanan*/
-.service-container {
   color: rgb(54, 53, 53);
-  justify-items: center;
 }
 
+/* Layanan */
 .layanan {
-  margin-top: 100px;
+  text-align: center;
   font-size: 25px;
-  margin-bottom: 35px;
+  margin: 100px 0 35px;
+  color: rgb(54, 53, 53);
+}
+
+.service-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
 .service-item_2 {
-  text-align: center;
-  align-items: center;
   width: 280px;
   height: 300px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 40px;
-}
-
-.service-item_2:hover {
-  box-shadow: 0px 6px 15px rgba(7, 40, 148, 0.3);
-}
-
-.service-item h3 {
-  font-size: 25px;
-  padding: 0px 5px 0px;
-  margin: 0px;
-  margin-top: 20px;
-}
-.service-item_2 p {
-  padding: 0px 20px 0px;
-  font-size: 15px;
-}
-
-.hansake_icon {
-  padding-top: 30px;
-  width: 30%;
-  height: auto;
-}
-
-/* Value*/
-.value-container {
-  color: rgb(54, 53, 53);
-  justify-items: center;
-}
-
-.value {
-  margin-top: 60px;
-  font-size: 25px;
-  margin-bottom: 35px;
-  padding-top: 100px;
-}
-
-.value_selling {
   text-align: center;
-  align-items: center;
-  width: 280px;
-  height: 550px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 40px;
-}
-
-.value_selling .property_img {
-  display: block;
-  margin: 15px auto 0;
-  padding-top: 15px;
-  width: 88%;
+  padding: 20px 10px;
   transition: all 0.3s ease;
 }
 
+.service-item_2:hover {
+  box-shadow: 0 6px 15px rgba(7, 40, 148, 0.3);
+}
+
+.service-item_2 img {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+/* Properti Unggulan */
+.value {
+  text-align: center;
+  font-size: 25px;
+  margin: 60px 0 35px;
+}
+
+.value-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.value_selling {
+  width: 280px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  transition: all 0.3s ease;
+  padding-bottom: 20px;
+}
+
 .value_selling:hover {
-  box-shadow: 0px 6px 15px rgba(7, 40, 148, 0.3);
+  box-shadow: 0 6px 15px rgba(7, 40, 148, 0.3);
+}
+
+.value_selling .property_img {
+  width: 88%;
+  display: block;
+  margin: 15px auto 0;
+  border-radius: 5px;
 }
 
 .value_selling h3 {
   font-size: 18px;
-  text-align: left;
-  margin-left: 30px;
-  margin-top: 25px;
-  margin-bottom: 0px;
+  margin: 25px 30px 0;
   color: rgb(54, 53, 53);
 }
 
-.value_selling h2 {
+.value_selling h4 {
   font-size: 25px;
-  text-align: left;
-  padding-left: 30px;
-  margin-top: 15px;
-  margin-bottom: 0px;
+  margin: 15px 0 0 30px;
   color: rgb(9, 87, 151);
 }
 
 .home_location {
   display: flex;
-  align-items: center; /* ganti flex-start → center biar rata tengah */
-  justify-content: flex-start;
+  align-items: center;
   gap: 6px;
-  margin-top: 10px;
-  padding-left: 30px;
+  margin: 10px 0 0 30px;
 }
 
 .home_location p {
-  margin: 0;
-  line-height: 1;
   font-size: 15px;
+  margin: 0;
 }
 
 .location_map {
   width: 16px;
   height: 16px;
-  flex-shrink: 0;
-  display: inline-block;
-  vertical-align: middle;
 }
 
 .point_icon {
   display: flex;
-  justify-content: flex-start;
   gap: 30px;
+  margin: 12px 0 0 30px;
   font-size: 13px;
-  margin-top: 12px;
-  margin-left: 30px;
 }
 
 .icon_item {
-  margin-top: 10px;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
   gap: 4px;
-}
-.icon_item p {
-  text-align: right;
-  margin-top: 1px;
 }
 
 .icon_item .top {
@@ -303,25 +263,29 @@ nav p {
   gap: 4px;
 }
 
+.icon_item p {
+  margin: 0;
+  font-size: 13px;
+}
+
+/* Tombol Hubungi */
 .hubungi_sekarang {
+  display: block;
   width: 225px;
   height: 40px;
-  margin: 20px auto 0px;
+  margin: 20px auto 0;
   background-color: rgb(9, 87, 151);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 10px;
+  text-decoration: none;
   font-size: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 
 .hubungi_sekarang:hover {
   transform: scale(1.05);
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-.hubungi_sekarang_teks {
-  color: white;
-  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
