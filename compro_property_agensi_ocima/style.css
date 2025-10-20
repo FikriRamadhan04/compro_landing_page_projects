@@ -92,6 +92,9 @@ nav p {
 }
 
 /* Tentang Kami */
+.about {
+  margin: 60px 0 35px;
+}
 .tentang_kami {
   text-align: center;
   font-size: 25px;
@@ -145,6 +148,9 @@ nav p {
 }
 
 /* Layanan */
+.service-section {
+  margin: 60px 0 35px;
+}
 .layanan {
   text-align: center;
   font-size: 25px;
@@ -180,10 +186,15 @@ nav p {
 }
 
 /* Properti Unggulan */
+.superior-property-section {
+  margin: 60px 0 35px;
+}
+
 .value {
   text-align: center;
   font-size: 25px;
   margin: 60px 0 35px;
+  color: rgb(54, 53, 53);
 }
 
 .value-container {
@@ -288,4 +299,89 @@ nav p {
 .hubungi_sekarang:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Testimoni Klien */
+.testimonial-section {
+  margin: 60px 0 35px;
+}
+
+.testimonial-title {
+  text-align: center;
+  font-size: 25px;
+  color: rgb(54, 53, 53);
+  margin-bottom: 30px;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testimonial-item {
+  width: 280px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  padding: 20px;
+}
+
+.testimonial-item:hover {
+  box-shadow: 0 6px 15px rgba(7, 40, 148, 0.3);
+}
+
+.testimonial-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.testimonial-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.testimonial-client {
+  font-size: 15px;
+  color: rgb(54, 53, 53);
+}
+
+.testimonial-client p {
+  font-size: 14px;
+  margin: 2px 0 0 0;
+}
+
+.testimonial-name {
+  margin: 0;
+  font-weight: bold;
+}
+
+.testimonial-location {
+  margin: 0;
+  color: dimgray;
+  font-size: 14px;
+}
+
+.testimonial-text {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgb(54, 53, 53);
+}
+
+/* Contact */
+.contact {
+  margin: 60px 0 35px;
+}
+
+.contact-title {
+  text-align: center;
+  color: rgb(54, 53, 53);
+  margin-bottom: 30px;
+  font-size: 25px;
 }
