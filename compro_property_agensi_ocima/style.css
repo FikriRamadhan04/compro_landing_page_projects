@@ -1,491 +1,593 @@
+:root {
+  --color-primary: #ffd700;
+  --color-primary-dark: #f0c400;
+  --color-bg: #262626;
+  --color-bg-surface: #383838;
+  --color-text: #f0f0f0;
+  --color-text-secondary: #aaaaaa;
+  --color-text-dark: #121212;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html,
-body {
-  font-family: Tahoma, sans-serif;
-  background-color: whitesmoke;
+html {
   scroll-behavior: smooth;
 }
 
-/* Navbar */
-header nav {
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  /* PERBAIKAN UTAMA UNTUK MOBILE: Mencegah scroll horizontal */
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  padding: 4rem 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.btn-konsultasi,
+.btn-detail,
+.btn-submit {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-text-dark);
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-konsultasi:hover,
+.btn-detail:hover,
+.btn-submit:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+header {
+  background-color: var(--color-bg-surface);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.nav-links {
   display: flex;
   align-items: center;
-  justify-content: start;
-  height: 60px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgb(9, 87, 151);
-  color: white;
-  font-size: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  padding: 0 15px;
+  gap: 1.5rem;
 }
 
-.nav_home_icon {
-  margin-right: 10px;
+.nav-links a {
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
-nav p {
-  font-size: 17px;
+.nav-links a:hover {
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.btn-nav {
+  background-color: var(--color-primary);
+  color: var(--color-text-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
   font-weight: bold;
 }
 
-.burger_menu {
-  margin-left: auto;
-  cursor: pointer;
+.btn-nav:hover {
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-dark);
+  border-bottom: 2px solid transparent;
 }
 
-/* Hero Section */
+.burger-menu {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
 .hero-section {
+  min-height: 80vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  height: 100vh;
-  color: white;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-    url("images/gambar_1.jpg") center/cover no-repeat;
-  padding: 0 10px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("images/gambar_1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 600px;
 }
 
 .hero-section .judul {
-  font-size: 45px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-size: 3.5rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
 }
 
 .hero-section .sub-judul {
-  font-size: 14px;
-  background-color: #d3e0fa;
-  color: black;
-  padding: 8px 12px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: var(--color-text);
+  margin-bottom: 2rem;
 }
 
-.btn-konsultasi {
-  display: inline-block;
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  background-color: rgb(9, 87, 151);
-  text-decoration: none;
-  padding: 15px 25px;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-}
-
-.btn-konsultasi:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Tentang Kami */
 .about {
-  margin: 30px 0 30px;
-}
-.tentang_kami {
-  text-align: center;
-  font-size: 25px;
-  color: rgb(54, 53, 53);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .visi_misi {
-  margin: 40px 20px;
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 .visi_misi article {
-  margin-bottom: 30px;
+  flex: 1;
+  background-color: var(--color-bg-surface);
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 5px solid var(--color-primary);
 }
 
 .visi_misi h3 {
-  color: rgb(9, 87, 151);
-  margin-bottom: 10px;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
 }
 
-.visi_misi p {
-  color: dimgray;
-  line-height: 1.5;
-}
-
-/* Stats */
 .stats-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  width: 280px;
-  height: 200px;
-  margin: 40px auto;
-  background-color: #d3e0fa;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
   text-align: center;
-  font-weight: bold;
+}
+
+.stats-item {
+  background-color: var(--color-bg-surface);
+  padding: 1.5rem;
+  border-radius: 8px;
 }
 
 .stats-item h3 {
-  font-size: 23px;
-  color: rgb(9, 87, 151);
-  margin-bottom: 5px;
+  font-size: 2.5rem;
+  color: var(--color-primary);
 }
 
-.stats-item p {
-  font-size: 14px;
-  color: rgb(54, 53, 53);
-}
-
-/* Layanan */
 .service-section {
-  margin: 30px 0 30px;
-  background-color: rgb(9, 87, 151);
-}
-.layanan {
-  text-align: center;
-  font-size: 25px;
-  color: white;
-  padding: 30px 0px 30px;
+  background-color: var(--color-bg-surface);
 }
 
 .service-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  padding-bottom: 30px;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.service-item_2 {
-  width: 280px;
-  height: 300px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.service-item {
+  flex: 1;
   text-align: center;
-  padding: 20px 10px;
-  transition: all 0.3s ease;
+  padding: 2rem;
 }
 
-.service-item_2:hover {
-  box-shadow: 0 6px 15px rgba(7, 40, 148, 0.3);
+.service-icon {
+  max-height: 60px;
+  margin: 0 auto 1rem auto;
+  filter: invert(1);
 }
 
-.service-item_2 img {
-  width: 30%;
-  margin-bottom: 20px;
-}
-
-/* Properti Unggulan */
-.superior-property-section {
-  margin: 60px 0 35px;
-}
-
-.value {
-  text-align: center;
-  font-size: 25px;
-  margin: 60px 0 35px;
-  color: rgb(54, 53, 53);
+.service-item h3 {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .value-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .value_selling {
-  width: 280px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-align: left;
-  transition: all 0.3s ease;
-  padding-bottom: 20px;
+  background-color: var(--color-bg-surface);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.value_selling .property_img {
-  width: 88%;
-  display: block;
-  margin: 15px auto 0;
-  border-radius: 5px;
+.value_selling:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.property_img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.property-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .value_selling h3 {
-  font-size: 18px;
-  margin: 25px 30px 0;
-  color: rgb(54, 53, 53);
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
 }
 
 .value_selling h4 {
-  font-size: 25px;
-  margin: 15px 0 0 30px;
-  color: rgb(9, 87, 151);
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
 }
 
 .home_location {
   display: flex;
   align-items: center;
-  gap: 6px;
-  margin: 10px 0 0 30px;
-}
-
-.home_location p {
-  font-size: 15px;
-  margin: 0;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-text-secondary);
 }
 
 .location_map {
   width: 16px;
   height: 16px;
+  filter: invert(1);
 }
 
 .point_icon {
   display: flex;
-  gap: 30px;
-  margin: 12px 0 0 30px;
-  font-size: 13px;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-secondary);
 }
 
 .icon_item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
+  text-align: center;
+  font-size: 0.9rem;
 }
 
 .icon_item .top {
   display: flex;
   align-items: center;
-  gap: 4px;
+  justify-content: center;
+  gap: 0.3rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
 }
 
-.icon_item p {
-  margin: 0;
-  font-size: 13px;
+.icon_item img {
+  width: 20px;
+  filter: invert(1);
 }
 
-/* Tombol Hubungi */
-.hubungi_sekarang {
-  display: block;
-  width: 225px;
-  height: 40px;
-  margin: 20px auto 0;
-  background-color: rgb(9, 87, 151);
-  color: white;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-size: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+.btn-detail {
+  margin-top: auto;
 }
 
-.hubungi_sekarang:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Testimoni Klien */
 .testimonial-section {
-  margin: 60px 0 35px;
-  background-color: rgb(9, 87, 151);
-}
-
-.testimonial-title {
-  text-align: center;
-  font-size: 25px;
-  color: white;
-  padding: 30px 0px 30px;
+  background-color: var(--color-bg-surface);
 }
 
 .testimonial-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  padding-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .testimonial-item {
-  background-color: white;
-  padding: 20px;
-  width: 250px;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-}
-
-.testimonial-item:hover {
-  box-shadow: 0 6px 15px rgba(7, 40, 148, 0.3);
+  background-color: var(--color-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 5px solid var(--color-primary);
 }
 
 .testimonial-top {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 10px;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .testimonial-avatar {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-}
-
-.testimonial-client {
-  font-size: 15px;
-  color: rgb(54, 53, 53);
-}
-
-.testimonial-client p {
-  font-size: 14px;
-  margin: 2px 0 0 0;
+  background-color: var(--color-bg-surface);
+  padding: 0.5rem;
 }
 
 .testimonial-name {
-  margin: 0;
-  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .testimonial-location {
-  margin: 0;
-  color: dimgray;
-  font-size: 14px;
+  color: var(--color-text-secondary);
 }
 
 .testimonial-text {
-  margin-top: 10px;
-  font-size: 14px;
-  line-height: 1.4;
-  color: rgb(54, 53, 53);
+  font-style: italic;
+  font-size: 1.1rem;
 }
 
-/* Contact */
-.contact {
-  margin: 30px 0;
-  padding: 40px 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--color-bg-surface);
+  padding: 3rem;
+  border-radius: 8px;
 }
 
-.contact-title {
-  text-align: center;
-  color: rgb(54, 53, 53);
-  margin-bottom: 30px;
-  font-size: 25px;
-  font-weight: 600;
+.contact-form h3,
+.contact-info h3 {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
 }
 
-.contact-container {
+.contact-form form {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding-bottom: 30px;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-form {
-  background-color: white;
-  padding: 25px 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  max-width: 450px;
+.contact-form input,
+.contact-form textarea {
   width: 100%;
-  transition: all 0.3s ease;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-text-secondary);
+  border-radius: 5px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-size: 1rem;
 }
 
-form:hover {
-  box-shadow: 0 6px 15px rgba(7, 40, 148, 0.3);
+.contact-form textarea {
+  resize: vertical;
 }
 
-input,
-textarea {
-  background-color: #d3e0fa;
-  border: none;
-  border-radius: 8px;
-  padding: 12px 15px;
-  margin: 8px 0;
-  width: 100%;
-  font-size: 15px;
-  font-family: "Poppins", sans-serif;
-  outline: none;
-  transition: all 0.2s ease;
-}
-
-input:focus,
-textarea:focus {
-  background-color: #c4d5ff;
-  box-shadow: 0 0 0 2px #9bb7ff;
-}
-
-button {
-  background-color: #007bff;
-  color: white;
-  padding: 12px 15px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-  width: 100%;
-  margin-top: 10px;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-.contact-information-title {
-  color: #333;
-  font-size: 26px;
-  font-weight: 600;
-  margin-bottom: 25px;
+.btn-submit {
+  align-self: flex-start;
 }
 
 .contact-information-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  padding: 10px 0px 10px;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .contact-information-item {
   display: flex;
   align-items: center;
-  gap: 15px;
-  width: 230px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.contact-information-item h3 {
-  color: #444;
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.contact-information-item span {
-  color: #666;
-  font-size: 16px;
+  gap: 1rem;
 }
 
 .contact-information-item img {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  filter: invert(1);
 }
 
-/* footer */
-.footer {
-  background-color: #444;
-  margin: 30px 0px 0px;
+.contact-information-item h3 {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.contact-information-item span {
+  color: var(--color-text-secondary);
+}
+
+footer {
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-secondary);
+  text-align: center;
+  padding: 3rem 2rem 2rem;
+  border-top: 2px solid var(--color-primary);
+}
+
+.footer-content h2 {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.social-media a {
+  font-size: 1.5rem;
+  color: var(--color-text);
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: var(--color-primary);
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #555;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+  .value-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* Perbaikan Navbar Responsif */
+  .navbar {
+    position: relative;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-bg-surface);
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--color-primary);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Perapian Tata Letak Konten */
+  .visi_misi,
+  .service-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .value-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .testimonial-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 1rem;
+    border-bottom: none;
+  }
+
+  .btn-nav {
+    margin: 0.5rem 1rem;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .value-container {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .stats-item {
+    padding: 1rem;
+  }
+
+  .contact-information-container {
+    display: block;
+  }
+
+  .contact-information-item {
+    margin-bottom: 1rem;
+  }
+
+  .hero-section .judul {
+    font-size: 2.2rem;
+  }
+  .hero-section .sub-judul {
+    font-size: 1.1rem;
+  }
+
+  section {
+    padding: 3rem 1rem;
+  }
 }

@@ -9,29 +9,42 @@
     />
     <title>Ocima Property</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
-    <!-- Header / Navbar -->
     <header>
-      <nav>
-        <img src="svg/home_icon.svg" alt="Ikon Home" class="nav_home_icon" />
-        <p>Ocima Property</p>
-        <img src="svg/burger_menu.svg" alt="Menu" class="burger_menu" />
+      <nav class="navbar">
+        <a href="#" class="nav-logo">Ocima Property</a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#tentang">Tentang Kami</a></li>
+          <li><a href="#layanan">Layanan</a></li>
+          <li><a href="#properti">Properti</a></li>
+          <li><a href="#testimoni">Testimoni</a></li>
+          <li><a href="#kontak" class="btn-nav">Kontak</a></li>
+        </ul>
+
+        <div class="burger-menu" id="burger-menu">
+          <i class="fas fa-bars"></i>
+        </div>
       </nav>
     </header>
 
-    <!-- Main Content -->
     <main>
-      <!-- Hero Section -->
-      <section class="hero-section">
-        <h1 class="judul">OCIMA PROPERTY</h1>
-        <h2 class="sub-judul">Bantu Carikan Rumah Terbaikmu</h2>
-        <a href="#" class="btn-konsultasi">Konsultasi Gratis</a>
+      <section class="hero-section" id="hero">
+        <div class="hero-content">
+          <h1 class="judul">OCIMA PROPERTY</h1>
+          <h2 class="sub-judul">Bantu Carikan Rumah Terbaikmu</h2>
+          <a href="#kontak" class="btn-konsultasi">Konsultasi Gratis</a>
+        </div>
       </section>
 
-      <!-- Tentang Kami -->
-      <section class="about">
-        <h2 class="tentang_kami">Tentang Kami</h2>
+      <section class="about" id="tentang">
+        <h2 class="section-title">Tentang Kami</h2>
 
         <div class="visi_misi">
           <article>
@@ -73,15 +86,14 @@
         </div>
       </section>
 
-      <!-- Layanan -->
-      <section class="service-section">
-        <h2 class="layanan">Layanan</h2>
+      <section class="service-section" id="layanan">
+        <h2 class="section-title">Layanan Kami</h2>
         <div class="service-container">
-          <article class="service-item_2">
+          <article class="service-item">
             <img
               src="images/handshake-icon.png"
               alt="Jual Beli Rumah"
-              class="hansake_icon"
+              class="service-icon"
             />
             <h3>Jual Beli Rumah</h3>
             <p>
@@ -91,11 +103,11 @@
             </p>
           </article>
 
-          <article class="service-item_2">
+          <article class="service-item">
             <img
               src="images/calculator_icon.png"
               alt="Konsultasi KPR"
-              class="hansake_icon"
+              class="service-icon"
             />
             <h3>Konsultasi KPR</h3>
             <p>
@@ -107,141 +119,255 @@
         </div>
       </section>
 
-      <!-- Properti Unggulan  -->
-      <section class="superior-property-section">
-        <h2 class="value">Properti Unggulan</h2>
+      <section class="superior-property-section" id="properti">
+        <h2 class="section-title">Properti Unggulan</h2>
         <div class="value-container">
-          <!-- Properti Unggulan 1-->
           <article class="value_selling">
             <img
               src="images/gambar_2.jpg"
               alt="Rumah Cluster Modern Bekasi Timur"
               class="property_img"
             />
-            <h3>Rumah Cluster Modern</h3>
-            <h4>Rp 850.000.000</h4>
-            <div class="home_location">
-              <img src="svg/map_icon.svg" alt="Lokasi" class="location_map" />
-              <p>Bekasi Timur, Jawa Barat</p>
+            <div class="property-content">
+              <h3>Rumah Cluster Modern</h3>
+              <h4>Rp 850.000.000</h4>
+              <div class="home_location">
+                <img src="svg/map_icon.svg" alt="Lokasi" class="location_map" />
+                <p>Bekasi Timur, Jawa Barat</p>
+              </div>
+              <div class="point_icon">
+                <div class="icon_item">
+                  <div class="top">
+                    <img src="svg/bed_icon.svg" alt="Kamar Tidur" />
+                    <span>3</span>
+                  </div>
+                  <p>Kamar</p>
+                </div>
+                <div class="icon_item">
+                  <div class="top">
+                    <img src="svg/bathroom_icon.svg" alt="Kamar Mandi" />
+                    <span>2</span>
+                  </div>
+                  <p>K. Mandi</p>
+                </div>
+                <div class="icon_item">
+                  <div class="top">
+                    <img src="svg/car_icon.svg" alt="Garasi" />
+                    <span>1</span>
+                  </div>
+                  <p>Garasi</p>
+                </div>
+              </div>
+              <a href="#" class="btn-detail">Hubungi Sekarang</a>
             </div>
-            <div class="point_icon">
-              <div class="icon_item">
-                <div class="top">
-                  <img src="svg/bed_icon.svg" alt="Kamar Tidur" />
-                  <span>3</span>
-                </div>
-                <p>Kamar</p>
-              </div>
-              <div class="icon_item">
-                <div class="top">
-                  <img src="svg/bathroom_icon.svg" alt="Kamar Mandi" />
-                  <span>2</span>
-                </div>
-                <p>Kamar Mandi</p>
-              </div>
-              <div class="icon_item">
-                <div class="top">
-                  <img src="svg/car_icon.svg" alt="Garasi" />
-                  <span>1</span>
-                </div>
-                <p>Garasi</p>
-              </div>
-            </div>
-            <a href="#" class="hubungi_sekarang_teks hubungi_sekarang"
-              >Hubungi Sekarang</a
-            >
           </article>
 
-          <!-- Properti Unggulan 2 -->
           <article class="value_selling">
             <img
               src="images/gambar_3.jpg"
-              alt="Rumah Cluster Modern Bekasi Timur"
+              alt="Rumah Minimalis Tangerang"
               class="property_img"
             />
-            <h3>Rumah Cluster Modern</h3>
-            <h4>Rp 850.000.000</h4>
-            <div class="home_location">
-              <img src="svg/map_icon.svg" alt="Lokasi" class="location_map" />
-              <p>Bekasi Timur, Jawa Barat</p>
+            <div class="property-content">
+              <h3>Rumah Minimalis Tangerang</h3>
+              <h4>Rp 1.200.000.000</h4>
+              <div class="home_location">
+                <img src="svg/map_icon.svg" alt="Lokasi" class="location_map" />
+                <p>BSD, Tangerang Selatan</p>
+              </div>
+              <div class="point_icon">
+                <div class="icon_item">
+                  <div class="top">
+                    <img src="svg/bed_icon.svg" alt="Kamar Tidur" />
+                    <span>4</span>
+                  </div>
+                  <p>Kamar</p>
+                </div>
+                <div class="icon_item">
+                  <div class="top">
+                    <img src="svg/bathroom_icon.svg" alt="Kamar Mandi" />
+                    <span>3</span>
+                  </div>
+                  <p>K. Mandi</p>
+                </div>
+                <div class="icon_item">
+                  <div class="top">
+                    <img src="svg/car_icon.svg" alt="Garasi" />
+                    <span>2</span>
+                  </div>
+                  <p>Garasi</p>
+                </div>
+              </div>
+              <a href="#" class="btn-detail">Hubungi Sekarang</a>
             </div>
-            <div class="point_icon">
-              <div class="icon_item">
-                <div class="top">
-                  <img src="svg/bed_icon.svg" alt="Kamar Tidur" />
-                  <span>3</span>
-                </div>
-                <p>Kamar</p>
-              </div>
-              <div class="icon_item">
-                <div class="top">
-                  <img src="svg/bathroom_icon.svg" alt="Kamar Mandi" />
-                  <span>2</span>
-                </div>
-                <p>Kamar Mandi</p>
-              </div>
-              <div class="icon_item">
-                <div class="top">
-                  <img src="svg/car_icon.svg" alt="Garasi" />
-                  <span>1</span>
-                </div>
-                <p>Garasi</p>
-              </div>
-            </div>
-            <a href="#" class="hubungi_sekarang_teks hubungi_sekarang"
-              >Hubungi Sekarang</a
-            >
           </article>
 
-          <!-- Properti Unggulan 3 -->
+          <article class="value_selling">
+            <img
+              src="images/gambar_2.jpg"
+              alt="Rumah Asri Depok"
+              class="property_img"
+            />
+            <div class="property-content">
+              <h3>Rumah Asri Depok</h3>
+              <h4>Rp 780.000.000</h4>
+              <div class="home_location">
+                <img src="svg/map_icon.svg" alt="Lokasi" class="location_map" />
+                <p>Sawangan, Depok</p>
+              </div>
+              <div class="point_icon">
+                <div class="icon_item">
+                  <div class="top">
+                    <img src="svg/bed_icon.svg" alt="Kamar Tidur" />
+                    <span>3</span>
+                  </div>
+                  <p>Kamar</p>
+                </div>
+                <div class="icon_item">
+                  <div class="top">
+                    <img src="svg/bathroom_icon.svg" alt="Kamar Mandi" />
+                    <span>2</span>
+                  </div>
+                  <p>K. Mandi</p>
+                </div>
+                <div class="icon_item">
+                  <div class="top">
+                    <img src="svg/car_icon.svg" alt="Garasi" />
+                    <span>1</span>
+                  </div>
+                  <p>Garasi</p>
+                </div>
+              </div>
+              <a href="#" class="btn-detail">Hubungi Sekarang</a>
+            </div>
+          </article>
+
           <article class="value_selling">
             <img
               src="images/gambar_3.jpg"
-              alt="Rumah Cluster Modern Bekasi Timur"
+              alt="Apartemen Jakarta Pusat"
               class="property_img"
             />
-            <h3>Rumah Cluster Modern</h3>
-            <h4>Rp 860.000.000</h4>
-            <div class="home_location">
-              <img src="svg/map_icon.svg" alt="Lokasi" class="location_map" />
-              <p>Bekasi Timur, Jawa Barat</p>
+            <div class="property-content">
+              <h3>Apartemen Jakarta Pusat</h3>
+              <h4>Rp 2.100.000.000</h4>
+              <div class="home_location">
+                <img src="svg/map_icon.svg" alt="Lokasi" class="location_map" />
+                <p>Thamrin, Jakarta Pusat</p>
+              </div>
+              <div class="point_icon">
+                <div class="icon_item">
+                  <div class="top">
+                    <img src="svg/bed_icon.svg" alt="Kamar Tidur" />
+                    <span>2</span>
+                  </div>
+                  <p>Kamar</p>
+                </div>
+                <div class="icon_item">
+                  <div class="top">
+                    <img src="svg/bathroom_icon.svg" alt="Kamar Mandi" />
+                    <span>2</span>
+                  </div>
+                  <p>K. Mandi</p>
+                </div>
+                <div class="icon_item">
+                  <div class="top">
+                    <img src="svg/car_icon.svg" alt="Garasi" />
+                    <span>1</span>
+                  </div>
+                  <p>Parkir</p>
+                </div>
+              </div>
+              <a href="#" class="btn-detail">Hubungi Sekarang</a>
             </div>
-            <div class="point_icon">
-              <div class="icon_item">
-                <div class="top">
-                  <img src="svg/bed_icon.svg" alt="Kamar Tidur" />
-                  <span>3</span>
-                </div>
-                <p>Kamar</p>
+          </article>
+
+          <article class="value_selling">
+            <img
+              src="images/gambar_2.jpg"
+              alt="Villa Sejuk Bogor"
+              class="property_img"
+            />
+            <div class="property-content">
+              <h3>Villa Sejuk Bogor</h3>
+              <h4>Rp 3.500.000.000</h4>
+              <div class="home_location">
+                <img src="svg/map_icon.svg" alt="Lokasi" class="location_map" />
+                <p>Puncak, Bogor</p>
               </div>
-              <div class="icon_item">
-                <div class="top">
-                  <img src="svg/bathroom_icon.svg" alt="Kamar Mandi" />
-                  <span>2</span>
+              <div class="point_icon">
+                <div class="icon_item">
+                  <div class="top">
+                    <img src="svg/bed_icon.svg" alt="Kamar Tidur" />
+                    <span>5</span>
+                  </div>
+                  <p>Kamar</p>
                 </div>
-                <p>Kamar Mandi</p>
-              </div>
-              <div class="icon_item">
-                <div class="top">
-                  <img src="svg/car_icon.svg" alt="Garasi" />
-                  <span>1</span>
+                <div class="icon_item">
+                  <div class="top">
+                    <img src="svg/bathroom_icon.svg" alt="Kamar Mandi" />
+                    <span>4</span>
+                  </div>
+                  <p>K. Mandi</p>
                 </div>
-                <p>Garasi</p>
+                <div class="icon_item">
+                  <div class="top">
+                    <img src="svg/car_icon.svg" alt="Garasi" />
+                    <span>3</span>
+                  </div>
+                  <p>Garasi</p>
+                </div>
               </div>
+              <a href="#" class="btn-detail">Hubungi Sekarang</a>
             </div>
-            <a href="#" class="hubungi_sekarang_teks hubungi_sekarang"
-              >Hubungi Sekarang</a
-            >
+          </article>
+
+          <article class="value_selling">
+            <img
+              src="images/gambar_3.jpg"
+              alt="Rumah Subsidi Cikarang"
+              class="property_img"
+            />
+            <div class="property-content">
+              <h3>Rumah Subsidi Cikarang</h3>
+              <h4>Rp 180.000.000</h4>
+              <div class="home_location">
+                <img src="svg/map_icon.svg" alt="Lokasi" class="location_map" />
+                <p>Cikarang, Bekasi</p>
+              </div>
+              <div class="point_icon">
+                <div class="icon_item">
+                  <div class="top">
+                    <img src="svg/bed_icon.svg" alt="Kamar Tidur" />
+                    <span>2</span>
+                  </div>
+                  <p>Kamar</p>
+                </div>
+                <div class="icon_item">
+                  <div class="top">
+                    <img src="svg/bathroom_icon.svg" alt="Kamar Mandi" />
+                    <span>1</span>
+                  </div>
+                  <p>K. Mandi</p>
+                </div>
+                <div class="icon_item">
+                  <div class="top">
+                    <img src="svg/car_icon.svg" alt="Garasi" />
+                    <span>1</span>
+                  </div>
+                  <p>Carport</p>
+                </div>
+              </div>
+              <a href="#" class="btn-detail">Hubungi Sekarang</a>
+            </div>
           </article>
         </div>
       </section>
 
-      <!-- Testimoni Klien -->
-      <section class="testimonial-section">
-        <h2 class="testimonial-title">Testimoni Klien</h2>
+      <section class="testimonial-section" id="testimoni">
+        <h2 class="section-title">Testimoni Klien</h2>
 
         <div class="testimonial-container">
-          <!-- Testimonial 1 -->
           <article class="testimonial-item">
             <div class="testimonial-top">
               <img
@@ -260,7 +386,6 @@
             </p>
           </article>
 
-          <!-- Testimonial 2 -->
           <article class="testimonial-item">
             <div class="testimonial-top">
               <img
@@ -274,11 +399,11 @@
               </div>
             </div>
             <p class="testimonial-text">
-              "Konsultasi KPRnya mudah dipahami dan sangat membantu."
+              "Konsultasi KPRnya mudah dipahami dan sangat membantu proses
+              pengajuan saya. Terima kasih Ocima."
             </p>
           </article>
 
-          <!-- Testimonial 3 -->
           <article class="testimonial-item">
             <div class="testimonial-top">
               <img
@@ -288,68 +413,117 @@
               />
               <div class="testimonial-client">
                 <h3 class="testimonial-name">Rudi Bayu</h3>
-                <p class="testimonial-location">Bekasi</p>
+                <p class="testimonial-location">Jakarta</p>
               </div>
             </div>
             <p class="testimonial-text">
-              "Dapat banyak rekomendasi rumah bagus di daerah bekasi."
+              "Dapat banyak rekomendasi rumah bagus di daerah bekasi. Agennya
+              sabar dan informatif."
+            </p>
+          </article>
+
+          <article class="testimonial-item">
+            <div class="testimonial-top">
+              <img
+                src="images/userprofile_icon.svg"
+                alt="Foto Rina Marlina"
+                class="testimonial-avatar"
+              />
+              <div class="testimonial-client">
+                <h3 class="testimonial-name">Rina Marlina</h3>
+                <p class="testimonial-location">Tangerang</p>
+              </div>
+            </div>
+            <p class="testimonial-text">
+              "Proses jual rumah saya dibantu sampai tuntas. Cepat laku dan
+              harganya sesuai. Mantap!"
             </p>
           </article>
         </div>
       </section>
 
-      <!-- Contact -->
-      <section class="contact">
-        <h2 class="contact-title">Hubungi Kami</h2>
-        <div class="contact-container">
-          <form action="">
-            <input type="text" placeholder="Nama Lengkap" />
-            <input type="text" placeholder="Email" />
-            <textarea rows="10" placeholder="Pesan"></textarea>
-            <button>Kirim</button>
-          </form>
+      <section class="contact" id="kontak">
+        <h2 class="section-title">Hubungi Kami</h2>
+        <div class="contact-wrapper">
+          <div class="contact-form">
+            <h3>Kirim Pesan</h3>
+            <form action="">
+              <input type="text" placeholder="Nama Lengkap" required />
+              <input type="email" placeholder="Email" required />
+              <textarea rows="5" placeholder="Pesan Anda"></textarea>
+              <button type="submit" class="btn-submit">Kirim</button>
+            </form>
+          </div>
+
+          <div class="contact-info">
+            <h3>Informasi Kontak</h3>
+            <div class="contact-information-container">
+              <div class="contact-information-item">
+                <img src="/svg/phone_icon.svg" alt="telepon" />
+                <div>
+                  <h3>Telepon</h3>
+                  <span>0895-3758-3937</span>
+                </div>
+              </div>
+              <div class="contact-information-item">
+                <img src="/svg/WhatsApp_icon.svg" alt="whatsApp" />
+                <div>
+                  <h3>WhatsApp</h3>
+                  <span>0895-39485-4938</span>
+                </div>
+              </div>
+              <div class="contact-information-item">
+                <img src="/svg/Email_icon.svg" alt="email" />
+                <div>
+                  <h3>Email</h3>
+                  <span>ocima@gmail.com</span>
+                </div>
+              </div>
+              <div class="contact-information-item">
+                <img src="/svg/location_icon.svg" alt="location" />
+                <div>
+                  <h3>Alamat</h3>
+                  <span>Jakarta, Indonesia</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <h2 class="contact-information-title">Informasi Kontak</h2>
-        <div class="contact-information-container">
-          <div class="contact-information-item">
-            <img src="/svg/phone_icon.svg" alt="telepon" />
-            <div>
-              <h3>Telepon</h3>
-              <span>0895-3758-3937</span>
-            </div>
-          </div>
-
-          <div class="contact-information-item">
-            <img src="/svg/WhatsApp_icon.svg" alt="whatsApp" />
-            <div>
-              <h3>WhatsApp</h3>
-              <span>0895-39485-4938</span>
-            </div>
-          </div>
-
-          <div class="contact-information-item">
-            <img src="/svg/Email_icon.svg" alt="email" />
-            <div>
-              <h3>Email</h3>
-              <span>ocimapropery@gmail.com</span>
-            </div>
-          </div>
-
-          <div class="contact-information-item">
-            <img src="/svg/location_icon.svg" alt="location" />
-            <div>
-              <h3>Alamat</h3>
-              <span>Jakarta</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Footer -->
-      <section class="footer">
-        <h2>Ocima Property</h2>
       </section>
     </main>
+
+    <footer>
+      <div class="footer-content">
+        <h2>Ocima Property</h2>
+        <p>Solusi properti terpercaya untuk rumah impian Anda.</p>
+        <ul class="social-media">
+          <li>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Ocima Property. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const burgerMenu = document.getElementById("burger-menu");
+      const navLinks = document.getElementById("nav-links");
+
+      burgerMenu.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        burgerMenu.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
